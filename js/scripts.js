@@ -16,7 +16,6 @@ function parseData(event) {
 //   while (n < 4) {
 //     newStr = prompt + n; // === "prompt" + 1 === "prompt1
 //     newArr.push((document.getElementById(newStr)).value);
-// //    console.log(newArr);
 //     n++;
 //   }
   
@@ -25,5 +24,21 @@ function parseData(event) {
   let prompt3 = document.getElementById("prompt3").value;
 
   let valArr = [prompt1, prompt2, prompt3];
-  console.log("valArr is: " + valArr);
+  let newArr = [];
+  newArr.push(valArr[1]);
+  newArr.push(valArr[0]);
+  newArr.push(valArr[2]);
+  const body = document.querySelector("body");
+  body.append(document.createElement("ul"));
+  const list = document.querySelector("ul");
+  list.append(document.createElement("li"));
+  list.append(document.createElement("li"));
+  list.append(document.createElement("li"));
+  const li = ((document.querySelectorAll("li"))[0]);
+  const li2 = ((document.querySelectorAll("li"))[1]);
+  const li3 = ((document.querySelectorAll("li"))[2]);
+  li.append(newArr[0]);
+  li2.append(newArr[1]);
+  li3.append(newArr[2]);
+
 }
